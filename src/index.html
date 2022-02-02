@@ -7,39 +7,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple DOM example</title>
   <style>
-    .bluetext {
-      color: blue;
-    }
 
-    .redtext {
-      color: red;
-    }
   </style>
 </head>
 
 <body>
-  <section>
-    <img class="dino" src="img/dino.jpeg" alt="dino image">
-    <p class="text bluetext">Lorem ipsum dolor sit, perspiciatis.</p>
-    <ul>
-      <li>Phyton</li>
-      <li>JavaScript</li>
-    </ul>
+  <h1>Task list</h1>
+  <form action="">
+    <input class="inpt" type="text">
+    <button type="submit">Add Task</button>
+  </form>
 
-    <button class="submit">
-      Submit
-    </button>
-    <button class="submit">
-      Submit
-    </button>
 
-    <script>
-      let btn = document.querySelector('button.submit');
-      btn.addEventListener('click', () => { document.querySelector('p').classList.add('redtext'); })
-      btn.addEventListener('mouseenter', () => { console.log('button mousenter') })
-      btn.addEventListener('mouseleave', () => { console.log('button mouseleave') })
 
-    </script>
+  <ul class="uls">
+    <!-- <li>test
+      <button>Delete</button>
+    </li> -->
+  </ul>
+  <script>
+    let btn = document.querySelector('button');
+    let inpt = document.querySelector('.inpt');
+    let uls = document.querySelector('.uls');
+    let form = document.querySelector('form')
+    form.addEventListener('submit', () => {
+      event.preventDefault();
+      //1) get input value.
+      let value = inpt.value;
+      console.log(value);
+      if (value.length === 0) {
+        alert('text is required')
+        return;
+      }
+      // 2) add input  value in ul list.
+
+      let li = document.createElement('li')
+      let btn1 = document.createElement('button')
+      li.textContent = value;
+      btn1.textContent = 'Delete';
+      btn1.addEventListener('click', () => {
+        li.remove();
+      });
+      li.appendChild(btn1);
+      uls.appendChild(li);
+
+
+
+
+      // 3) clean the input
+      inpt.value = '';
+    })
+
+
+
+
+
+
+
+
+
+
+
+  </script>
 </body>
 
 </html>
