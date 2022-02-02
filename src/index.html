@@ -20,7 +20,7 @@
 <body>
   <section>
     <img class="dino" src="img/dino.jpeg" alt="dino image">
-    <p class="text">Lorem ipsum dolor sit, perspiciatis.</p>
+    <p class="text bluetext">Lorem ipsum dolor sit, perspiciatis.</p>
     <ul>
       <li>Phyton</li>
       <li>JavaScript</li>
@@ -29,11 +29,13 @@
     <button class="submit">
       Submit
     </button>
-
+    <button class="submit">
+      Submit
+    </button>
 
     <script>
-      let btn = document.querySelector('.submit');
-      btn.addEventListener('click', () => { document.querySelector('p').classList.add('bluetext'); })
+      let btn = document.querySelector('button.submit');
+      btn.addEventListener('click', () => { document.querySelector('p').classList.add('redtext'); })
       btn.addEventListener('mouseenter', () => { console.log('button mousenter') })
       btn.addEventListener('mouseleave', () => { console.log('button mouseleave') })
 

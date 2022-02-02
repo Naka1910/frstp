@@ -56,19 +56,19 @@
 
 // console.log(printName());
 
-let arr = [20, 14, 18, false, null, 35, 40];
-for (let i = 0; i < arr.length; i++) {
+// let arr = [20, 14, 18, false, null, 35, 40];
+// for (let i = 0; i < arr.length; i++) {
 
-  if (typeof arr[i] === 'number' && arr[i] % 5 === 0) {
-    console.log(arr[i]);
-  }
-}
+//   if (typeof arr[i] === 'number' && arr[i] % 5 === 0) {
+//     console.log(arr[i]);
+//   }
+// }
 
 
-let numbs = [8, 6, 66, 45, -2];
+// let numbs = [8, 6, 66, 45, -2];
 
-let x = 0;
-while (x < numbs.length) {
-  console.log(numbs[x])
-  x++;
-}  
+// let x = 0;
+// while (x < numbs.length) {
+//   console.log(numbs[x])
+//   x++;
+// }  
